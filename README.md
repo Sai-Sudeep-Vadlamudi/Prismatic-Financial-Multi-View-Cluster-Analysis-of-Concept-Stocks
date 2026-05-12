@@ -19,6 +19,8 @@ The challenge is that these relationships are difficult to validate. Two compani
 
 This project turns raw historical stock data into an interactive visual reasoning workflow for equity research. Instead of relying on static sector labels or single correlation values, users can generate stock clusters, inspect internal relationships, validate pairwise behavior across time windows, and connect market movement with business context. It solves that problem by combining **financial correlation analysis, interactive visualization, business-context exploration, and multi-scale time-series validation** into one coordinated workflow.
 
+📄 **Read the original paper here:**  
+[Prismatic: Interactive Multi-View Cluster Analysis of Concept Stocks](./Prismatic_Interactive_Multi-View_Cluster_Analysis_of_Concept_Stocks%20(5).pdf)
 
 ## Problem Statement
 

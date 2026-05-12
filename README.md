@@ -23,7 +23,7 @@ This project solves that problem by combining **financial correlation analysis, 
 
 ## Problem Statement
 
-Traditional financial dashboards are good at showing what happened to a stock, but they often fail to explain how groups of stocks behave together and whether those relationships are meaningful.
+Basic financial dashboards are good at showing what happened to a stock, but they often fail to explain how stock clusters behave together and whether those qualitative & quantitative relationships are meaningful.
 A financial analyst, portfolio researcher, or data-driven investor may need to answer questions such as:
 
 - Which stocks moved together during a specific market period?

@@ -1,0 +1,13 @@
+{
+  "years": [
+    2020
+  ],
+  "files": {
+    "2020": {
+      "filename": "full_corr_2020.json",
+      "n_tickers": 486,
+      "n_days": 253,
+      "file_size_mb": 1.87
+    }
+  }
+}

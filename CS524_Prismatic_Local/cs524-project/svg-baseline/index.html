@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SVG Baseline — Correlation Matrix</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+  <h1>SVG Baseline — Correlation Matrix</h1>
+
+  <div class="controls">
+    <label>Subset N:
+      <select id="select-n">
+        <option value="40">N = 40</option>
+        <option value="80">N = 80</option>
+        <option value="160" selected>N = 160</option>
+        <option value="300">N = 300</option>
+        <option value="500">N = 500</option>
+      </select>
+    </label>
+    <button id="btn-render">Render</button>
+    <button id="btn-benchmark">Run Benchmark</button>
+  </div>
+
+  <div id="metrics">Click "Render" to start...</div>
+  <div id="chart-container"></div>
+  <div class="tooltip" id="tooltip"></div>
+
+  <script src="js/matrix.js"></script>
+</body>
+</html>

@@ -1,0 +1,337 @@
+/* ─── Global Reset & General ─── */
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+h1 {
+    font-size: 22px;
+    margin: 0 0 15px 0;
+    color: #0B1D3A;
+}
+
+h2 {
+    font-size: 14px;
+    margin: 0 0 10px 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+    color: #444;
+}
+
+h3 {
+    font-size: 12px;
+    margin: 0 0 5px 0;
+    color: #666;
+}
+
+.top-controls {
+    display: flex;
+    background: #fff;
+    padding: 10px 15px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    gap: 15px;
+    align-items: center;
+}
+
+label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+select,
+button {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+button {
+    background-color: #0B1D3A;
+    color: white;
+    border: none;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: #1a3a6a;
+}
+
+button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+#metrics {
+    margin-top: 15px;
+    background: white;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    font-family: monospace;
+    white-space: pre-wrap;
+    font-size: 12px;
+    color: #444;
+    border: 1px solid #eee;
+}
+
+/* ─── Main Layout: mimics Prismatic Figure 3 ─── */
+.prismatic-layout {
+    display: grid;
+    grid-template-columns: 220px 1fr 280px;
+    grid-template-rows: auto auto;
+    gap: 8px;
+}
+
+/* Common Panel Styling */
+.view-panel,
+.view-network,
+.view-matrix,
+.view-knowledge,
+.view-prisms {
+    background: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e0e0e0;
+}
+
+/* View A: Financial Correlation Network (left column, top) */
+.view-network {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    min-height: 400px;
+}
+
+/* View B: Correlation Matrix (center, top) */
+.view-matrix {
+    grid-column: 2;
+    grid-row: 1;
+    min-height: 520px;
+    display: flex;
+    flex-direction: column;
+}
+
+#matrix-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 480px;
+}
+
+/* View C: Knowledge Graph (right column, top) */
+.view-knowledge {
+    grid-column: 3;
+    grid-row: 1;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+#knowledge-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* View D: Prism Time Series (center + right, bottom) */
+.view-prisms {
+    grid-column: 2 / 4;
+    grid-row: 2;
+    min-height: 250px;
+}
+
+.prism-grid {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 5px;
+}
+
+.prism-panel {
+    flex: 1;
+    min-width: 250px;
+    border: 1px solid #eee;
+    background: #fafafa;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+/* ─── Tooltip ─── */
+.tooltip {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 11px;
+    pointer-events: none;
+    display: none;
+    z-index: 1000;
+    white-space: nowrap;
+}
+
+/* ─── Network View Controls (NEW - Week 3) ─── */
+.network-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 10px;
+    padding: 8px;
+    background: #fafafa;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+
+.network-controls label {
+    display: flex;
+    flex-direction: column;
+    font-size: 11px;
+    font-weight: 600;
+    color: #555;
+    gap: 3px;
+    align-items: flex-start;
+}
+
+.network-controls input[type="text"] {
+    padding: 4px 6px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-family: 'Consolas', monospace;
+    width: 90%;
+}
+
+.network-controls input[type="range"] {
+    width: 100%;
+}
+
+.network-controls button {
+    padding: 6px 12px;
+    font-size: 12px;
+    background: #0B1D3A;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.network-controls button:hover {
+    background: #1a3a6a;
+}
+
+/* ─── Top Status Bar (NEW - Week 3) ─── */
+.top-status {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.top-status #status-bar {
+    font-size: 12px;
+    font-weight: 600;
+    color: #0B1D3A;
+    flex: 1;
+}
+
+.top-status #dom-counter {
+    font-size: 11px;
+    color: #888;
+    font-family: 'Consolas', monospace;
+}
+
+.top-status button {
+    padding: 5px 10px;
+    font-size: 12px;
+    background: #0B1D3A;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.top-status button:disabled {
+    background: #aaa;
+    cursor: not-allowed;
+}
+
+/* ─── View Status Messages ─── */
+.view-status {
+    font-size: 11px;
+    color: #999;
+    font-style: italic;
+    padding: 4px 0;
+}
+
+/* ─── Year Row Clickable ─── */
+.year-row {
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.year-row:hover {
+    background: rgba(11, 29, 58, 0.05);
+}
+
+.year-row.selected {
+    background: rgba(11, 29, 58, 0.1);
+    outline: 2px solid #0B1D3A;
+    outline-offset: -1px;
+}
+
+/* ─── Stock Label Clickable ─── */
+.tick-left,
+.tick-top {
+    cursor: pointer;
+}
+
+.tick-left:hover,
+.tick-top:hover {
+    fill: #0B1D3A !important;
+    font-weight: 700 !important;
+}
+
+/* ─── Metrics Panel ─── */
+#metrics-details {
+    margin-top: 10px;
+}
+
+#metrics-details summary {
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    color: #555;
+    padding: 6px;
+}
+
+#metrics {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px 15px;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 11px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    max-height: 400px;
+    overflow-y: auto;
+}

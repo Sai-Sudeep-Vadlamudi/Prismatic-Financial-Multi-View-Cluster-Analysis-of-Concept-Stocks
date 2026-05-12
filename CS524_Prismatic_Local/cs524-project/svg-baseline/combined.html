@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Prismatic — Interactive Multi-View SVG Baseline</title>
+    <link rel="stylesheet" href="css/combined.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+
+    <h1>Prismatic — Interactive Multi-View SVG Baseline</h1>
+
+    <!-- ─── Top Status ─── -->
+    <div class="top-status">
+        <span id="status-bar">Loading data...</span>
+        <span id="dom-counter"></span>
+        <button id="btn-benchmark" disabled>Run Combined Benchmark</button>
+    </div>
+
+    <!-- ─── Prismatic Figure 3 Layout ─── -->
+    <div class="prismatic-layout">
+
+        <!-- ═══ A: Financial Correlation Network (left column) ═══ -->
+        <div class="view-panel view-network">
+            <h2>A · Financial Correlation Network</h2>
+
+            <div class="network-controls">
+                <label>Must-have stocks:
+                    <input type="text" id="input-tickers" placeholder="e.g. AAPL, MSFT, GOOGL"
+                        value="AAPL, MSFT, GOOGL, AMZN">
+                </label>
+                <label>Correlation threshold:
+                    <input type="range" id="input-threshold" min="0.1" max="0.9" step="0.05" value="0.5">
+                    <span id="threshold-value">0.50</span>
+                </label>
+                <button id="btn-generate">Generate Clusters</button>
+            </div>
+
+            <div id="network-container"></div>
+        </div>
+
+        <!-- ═══ B: Correlation Matrix (center, top) ═══ -->
+        <div class="view-panel view-matrix">
+            <h2>B · Correlation Matrix</h2>
+            <div id="matrix-status" class="view-status">Select a year row in the Network View →</div>
+            <div id="matrix-container"></div>
+        </div>
+
+        <!-- ═══ C: Knowledge Graph (right column, top) ═══ -->
+        <div class="view-panel view-knowledge">
+            <h2>C · Knowledge Graph</h2>
+            <div id="knowledge-status" class="view-status">Click a stock label in the Matrix →</div>
+            <div id="knowledge-container"></div>
+        </div>
+
+        <!-- ═══ D: Prism Time Series (bottom, spans center + right) ═══ -->
+        <div class="view-panel view-prisms">
+            <h2>D · Prism Time Series</h2>
+            <div id="prism-status" class="view-status">Click a cell (i, j) in the Matrix →</div>
+            <div class="prism-grid">
+                <div class="prism-panel">
+                    <h3 id="prism-label-d1">D1 · Stock vs Market</h3>
+                    <div id="prism-d1"></div>
+                </div>
+                <div class="prism-panel">
+                    <h3 id="prism-label-d2">D2 · Stock vs Sector Peer</h3>
+                    <div id="prism-d2"></div>
+                </div>
+                <div class="prism-panel">
+                    <h3 id="prism-label-d3">D3 · Pairwise Comparison</h3>
+                    <div id="prism-d3"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Shared tooltip -->
+    <div class="tooltip" id="tooltip"></div>
+
+    <!-- Metrics panel (collapsible) -->
+    <details id="metrics-details">
+        <summary>Performance Metrics</summary>
+        <pre id="metrics"></pre>
+    </details>
+
+    <!-- Load order matters: dependencies first -->
+    <script src="js/network-view.js?v=7"></script>
+    <script src="js/matrix-enriched.js?v=7"></script>
+    <script src="js/prism-dynamic.js?v=7"></script>
+    <script src="js/knowledge-view.js?v=7"></script>
+    <script src="js/combined.js?v=7"></script>
+
+</body>
+
+</html>

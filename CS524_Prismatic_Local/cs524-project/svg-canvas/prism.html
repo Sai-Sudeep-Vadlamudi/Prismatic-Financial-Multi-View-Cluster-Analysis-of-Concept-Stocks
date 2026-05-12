@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SVG Baseline — Prism Time Series View</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+    <h1>SVG Baseline — Prism Time Series (e,w)</h1>
+
+    <div class="controls">
+        <label>Pair:
+            <select id="select-pair">
+                <option value="AAPL_MSFT">AAPL vs MSFT</option>
+            </select>
+        </label>
+        <button id="btn-render">Render</button>
+        <button id="btn-benchmark">Run Benchmark</button>
+    </div>
+
+    <div id="metrics">Click "Render" to start...</div>
+    <div id="chart-container"></div>
+    <div class="tooltip" id="tooltip"></div>
+
+    <script src="js/prism.js"></script>
+</body>
+
+</html>

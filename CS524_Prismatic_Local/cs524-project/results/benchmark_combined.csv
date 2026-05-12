@@ -1,0 +1,5 @@
+type,N,total_dom,mat_brush_p50,mat_brush_p95,mat_fps,prism_brush_p50,prism_brush_p95,prism_fps
+combined,40,127396,5.30,14.70,14,24.10,30.40,8
+combined,80,137728,7.20,32.60,18,20.40,22.90,8
+combined,160,176794,23.10,32.50,10,22.00,32.40,6
+combined,300,216798,43.20,466.90,2,26.00,58.00,4

@@ -24,7 +24,6 @@ This project solves that problem by combining **financial correlation analysis, 
 ## Problem Statement
 
 Traditional financial dashboards are good at showing what happened to a stock, but they often fail to explain how groups of stocks behave together and whether those relationships are meaningful.
-
 A financial analyst, portfolio researcher, or data-driven investor may need to answer questions such as:
 
 - Which stocks moved together during a specific market period?
@@ -36,6 +35,11 @@ A financial analyst, portfolio researcher, or data-driven investor may need to a
 - Can users build their own concept-stock groups instead of relying only on predefined sectors?
 
 This project addresses those questions by turning raw stock-price data into an interactive reasoning system for financial cluster analysis.
+
+<img width="1004" height="327" alt="{2767FC8A-1733-41C5-9BD2-D5C6FD97EF00}" src="https://github.com/user-attachments/assets/c16faf14-9125-46d8-81cc-2ba65729e4bd" />
+
+
+Here is a simplified example illustrating different financial clusters. Sectors and industries are related hierarchically, while concept stocks can be constructed arbitrarily to label specific business relational knowledge.
 
 ---
 
@@ -94,6 +98,8 @@ This helps analysts understand:
 - which companies are outliers,
 - and whether the cluster behaves as one coherent theme.
 
+
+
 ---
 
 ## 3. Correlation Matrix View
@@ -107,6 +113,7 @@ It helps users quickly identify:
 - possible sub-clusters,
 - noisy members,
 - and stocks that may not belong in the final group.
+<img width="933" height="439" alt="{F7F86698-96F2-4408-960B-D78B01FCE7B9}" src="https://github.com/user-attachments/assets/df5f2adb-ae91-43ad-84e4-7549e2e9ee3e" />
 
 This view is useful for validating whether a generated cluster is internally consistent or whether it contains unrelated companies.
 
@@ -126,6 +133,7 @@ This helps identify:
 - long-term divergence,
 - temporary co-movement,
 - and periods where two stocks stop behaving similarly.
+<img width="944" height="209" alt="{7F9D67F1-8A73-4540-BFA5-FFB54F811056}" src="https://github.com/user-attachments/assets/452c6a71-e069-4562-bf98-2a7d0c18e211" />
 
 This feature makes the tool more analytical than a normal stock dashboard because it helps users validate the quality and stability of relationships over time.
 
@@ -142,6 +150,11 @@ This helps answer questions such as:
 - Is the correlation explainable from a business perspective?
 - Is the relationship surprising and worth deeper investigation?
 - Does the cluster represent a real market theme or only temporary market movement?
+<img width="202" height="342" alt="{AB512E2A-56E6-41A3-807A-F02C43119B6D}" src="https://github.com/user-attachments/assets/7b9e3fc6-4936-4f24-b2d4-bb8836cc83e7" />
+<img width="200" height="342" alt="{687C3FC6-C464-4EE6-9EE9-76286915B94E}" src="https://github.com/user-attachments/assets/a41139ef-22fd-4834-98ea-a4d9f39de67d" />
+<img width="200" height="342" alt="{C48606DC-525D-4A75-B9F3-EDDEF122AC7C}" src="https://github.com/user-attachments/assets/4cf40c04-e092-47fc-98e2-63bd06373c78" />
+<img width="200" height="342" alt="{4AA0F813-E4A5-461A-9538-076655227CA5}" src="https://github.com/user-attachments/assets/ce66d728-ed93-4445-807b-b5771911777b" />
+
 
 By combining quantitative behavior with business context, the tool supports more defensible financial reasoning.
 

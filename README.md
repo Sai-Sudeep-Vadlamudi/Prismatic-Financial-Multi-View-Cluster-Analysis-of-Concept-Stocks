@@ -17,9 +17,8 @@ In real-world investing and portfolio research, stocks are not always understood
 
 The challenge is that these relationships are difficult to validate. Two companies may appear related because they belong to the same industry, but their stock behavior may be very different. Similarly, two companies from different sectors may temporarily move together because of a shared market event. A single correlation number or static dashboard is not enough to explain these relationships.
 
-This project solves that problem by combining **financial correlation analysis, interactive visualization, business-context exploration, and multi-scale time-series validation** into one coordinated workflow.
+This project turns raw historical stock data into an interactive visual reasoning workflow for equity research. Instead of relying on static sector labels or single correlation values, users can generate stock clusters, inspect internal relationships, validate pairwise behavior across time windows, and connect market movement with business context. It solves that problem by combining **financial correlation analysis, interactive visualization, business-context exploration, and multi-scale time-series validation** into one coordinated workflow.
 
----
 
 ## Problem Statement
 
@@ -175,28 +174,6 @@ This comparison demonstrates an important real-world engineering tradeoff:
 
 The Canvas implementation improves the system’s ability to handle larger and more complex financial visualizations.
 
----
-
-## Why This Is More Than a Dashboard
-
-Most financial dashboards answer fixed questions:
-
-- What is the stock price?
-- What is the return?
-- What sector is the company in?
-- What does the chart look like?
-
-This project supports a deeper analytical process:
-
-- Why are these stocks grouped together?
-- Is this cluster meaningful?
-- Is the relationship stable over time?
-- Is the stock moving with the group or against it?
-- Is this a real business theme or only a temporary correlation?
-- Which stock should be removed from the cluster?
-- Which stock deserves further investigation?
-
-The focus is not just data presentation. The focus is **interactive financial reasoning**.
 
 ---
 

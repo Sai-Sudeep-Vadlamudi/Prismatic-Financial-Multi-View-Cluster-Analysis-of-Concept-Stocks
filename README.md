@@ -13,6 +13,7 @@
 
 The project is inspired by the research paper **“Prismatic: Interactive Multi-View Cluster Analysis of Concept Stocks”** and adapts its core idea into a practical browser-based analytics tool for U.S. equity-market data.
 
+
 In real-world investing and portfolio research, stocks are not always understood only through fixed sector labels such as Technology, Healthcare, Finance, or Energy. Analysts often reason through broader market themes such as AI infrastructure, semiconductor supply chains, cloud computing, electric vehicles, banking stress, healthcare shocks, or event-driven market behavior. These theme-based groups are commonly understood as **concept-stock clusters**.
 
 The challenge is that these relationships are difficult to validate. Two companies may appear related because they belong to the same industry, but their stock behavior may be very different. Similarly, two companies from different sectors may temporarily move together because of a shared market event. A single correlation number or static dashboard is not enough to explain these relationships.

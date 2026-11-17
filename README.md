@@ -99,7 +99,6 @@ This helps analysts understand:
 - which companies are outliers,
 - and whether the cluster behaves as one coherent theme.
 
-
 ---
 
 ## 3. Correlation Matrix View
